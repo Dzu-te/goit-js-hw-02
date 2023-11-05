@@ -16,10 +16,10 @@ console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41));
 */
 
 function formatMessage(message, maxLength) {
-  if (maxLength > message.length) {
-    return message.slice(0, maxLength) + "...";
-  } else {
+  if (message.length <= maxLength) {
     return message;
+  } else {
+    return message.slice(0, maxLength) + "...";
   }
 }
 
